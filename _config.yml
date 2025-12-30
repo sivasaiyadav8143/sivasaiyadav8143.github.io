@@ -2,9 +2,5 @@ theme: jekyll-theme-cayman
 title: "Siva Sai"
 description: "Senior Data Analyst & AI/ML Engineer"
 
-sass:
-  style: compressed
-
 include:
   - assets
-
