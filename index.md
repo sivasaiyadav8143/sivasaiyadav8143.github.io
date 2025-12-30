@@ -2,6 +2,7 @@
 layout: default
 title: "Home"
 ---
+<link rel="stylesheet" href="assets/css/style.css">
 
 <!-- HERO SECTION -->
 <div style="text-align: center; margin-top: 30px;">
