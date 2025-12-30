@@ -74,6 +74,8 @@ I publish clear, practical articles on:
 - **Medium:**  
 - **Email:**
 
+---
+
 <footer style="text-align:center; margin-top: 60px; color:#777;">
   © 2025 Siva Sai — Built with GitHub Pages
 </footer>
