@@ -1,0 +1,35 @@
+/* Typography */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: #111;
+}
+
+/* Links */
+a {
+  color: #3A7AFE;
+}
+a:hover {
+  color: #2AA198;
+}
+
+/* Section spacing */
+section {
+  margin-top: 60px;
+}
+
+/* Hero text */
+.hero-text {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Background */
+body {
+  background-color: #fcfcfc;
+}
