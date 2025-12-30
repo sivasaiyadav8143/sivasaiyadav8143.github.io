@@ -31,7 +31,7 @@ Handles large PDFs, supports semantic search, and is deployed on Hugging Face Sp
 
 ### 🧠 **LLM Training Pipeline**
 An end‑to‑end workflow for fine‑tuning LLMs on custom datasets.  
-Includes data prep, tokenization, training loops, evaluation, and deployment.
+Includes data prep, tokenisation, training loops, evaluation, and deployment.
 
 ### 🔎 **NLP Tools Suite**
 A collection of NLP utilities for tokenisation, embeddings, summarisation, and text classification.
@@ -44,9 +44,8 @@ ETL workflows, automation scripts, and scalable data processing systems.
 ## 🏆 Certifications & Learning
 - Post Graduate Program in AI & ML — UT Austin  
 - Applied Generative AI — Johns Hopkins University  
-- Google Data Analytics Professional Certificate *(in progress)*  
+- Google Data Analytics Professional Certificate
 - Google Advanced Data Analytics *(next)*  
-- IBM Machine Learning & AI courses  
 
 ---
 
