@@ -2,6 +2,7 @@
 layout: default
 title: "Home"
 ---
+
 <link rel="stylesheet" href="assets/css/style.css">
 
 <!-- HERO SECTION -->
@@ -23,11 +24,11 @@ Alongside my professional work, I’m actively building advanced AI projects and
 ---
 
 ## 🔍 What I Do
-- Build and deploy **AI/ML models** for real‑world use cases  
-- Design **RAG chatbots**, semantic search systems, and LLM pipelines  
-- Develop **data engineering workflows**, ETL pipelines, and automation tools  
-- Create **educational content** and technical articles  
-- Solve complex engineering problems with clarity and precision  
+- AI/ML model development and deployment
+- RAG chatbots and semantic search systems
+- Data engineering workflows and automation
+- NLP tools and model pipelines
+- Technical writing and educational content
 
 ---
 
