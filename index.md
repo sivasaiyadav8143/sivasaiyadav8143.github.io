@@ -12,14 +12,14 @@ title: "Home"
   </p>
 </div>
 
----
+<div style="margin-top: 50px;"></div>
  
 My work spans **machine learning, NLP, LLMs, RAG systems, and data engineering**, with a strong focus on practical, production‑ready AI solutions.
 
 I currently work as **Assistant Vice President at Citi, London**, where I develop analytical solutions, automate workflows, and architect scalable data systems.  
 Alongside my professional work, I’m actively building advanced AI projects and earning certifications from **Google, IBM, UT Austin, and Johns Hopkins University**.
 
----
+<div style="margin-top: 50px;"></div>
 
 ## 🔍 What I Do
 - Build and deploy **AI/ML models** for real‑world use cases  
@@ -68,13 +68,12 @@ I publish clear, practical articles on:
 
 ---
 
-<footer style="text-align:center; margin-top: 60px; color:#777;">
-  © 2025 Siva Sai — Built with GitHub Pages
-</footer>
-
-
 ## 📬 Let’s Connect
 - **LinkedIn:**  
 - **GitHub:**  
 - **Medium:**  
-- **Email:**  
+- **Email:**
+
+<footer style="text-align:center; margin-top: 60px; color:#777;">
+  © 2025 Siva Sai — Built with GitHub Pages
+</footer>
