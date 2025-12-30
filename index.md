@@ -2,11 +2,18 @@
 layout: default
 title: "Home"
 ---
-<img src="profile.png" alt="Siva Sai" style="width:180px; border-radius:50%; display:block; margin: 0 auto 20px auto;">
-# Hi, I’m **Siva Sai**  
-### Senior Data Analyst & AI/ML Engineer
 
-I build intelligent systems that transform data into decisions.  
+<div style="text-align: center; margin-top: 30px;">
+  <img src="profile.png" alt="Siva Sai" style="width:160px; border-radius:50%; margin-bottom: 20px;">
+  <h1 style="margin-bottom: 5px;">Siva Sai</h1>
+  <h3 style="font-weight: 300; color: #555;">Senior Data Analyst & AI/ML Engineer</h3>
+  <p style="max-width: 600px; margin: 15px auto; color: #666;">
+    I build intelligent systems that transform data into decisions — specialising in Machine Learning, NLP, LLMs, RAG systems, and scalable data engineering.
+  </p>
+</div>
+
+---
+ 
 My work spans **machine learning, NLP, LLMs, RAG systems, and data engineering**, with a strong focus on practical, production‑ready AI solutions.
 
 I currently work as **Assistant Vice President at Citi, London**, where I develop analytical solutions, automate workflows, and architect scalable data systems.  
@@ -60,6 +67,11 @@ I publish clear, practical articles on:
 *(Your blog section will automatically list your latest posts.)*
 
 ---
+
+<footer style="text-align:center; margin-top: 60px; color:#777;">
+  © 2025 Siva Sai — Built with GitHub Pages
+</footer>
+
 
 ## 📬 Let’s Connect
 - **LinkedIn:**  
