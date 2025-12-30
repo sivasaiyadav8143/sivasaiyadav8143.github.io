@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siva Sai - Senior Data Analyst & AI/ML Engineer</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7e22ce;
+            --accent: #ec4899;
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --card-bg: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: linear-gradient(135deg, #f0f9ff 0%, #fdf2f8 100%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 5rem 0 3rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border-radius: 0 0 2rem 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: rotate(30deg);
+        }
+
+        .profile-container {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        section {
+            margin: 4rem 0;
+            padding: 0 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-content {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border: 1px solid var(--light-gray);
+            backdrop-filter: blur(10px);
+        }
+
+        .section-content p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .what-i-do {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .service-item {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1.2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .service-item h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+        }
+
+        .project-card h3 {
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+        }
+
+        .project-card .tech {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 0.5rem 0;
+            font-weight: 500;
+        }
+
+        .cert-list {
+            list-style: none;
+        }
+
+        .cert-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--light-gray);
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .cert-list li:last-child {
+            border-bottom: none;
+        }
+
+        .cert-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .writing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .writing-card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--dark);
+            display: block;
+            height: 100%;
+        }
+
+        .writing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: var(--primary);
+        }
+
+        .writing-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .writing-card .writing-meta {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .writing-card .writing-preview {
+            font-size: 0.9rem;
+            color: var(--gray);
+            line-height: 1.5;
+        }
+
+        .connect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .connect-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--dark);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            background: var(--light);
+            border: 2px solid var(--light-gray);
+            transition: var(--transition);
+            font-weight: 600;
+            height: 100%;
+            text-align: center;
+        }
+
+        .connect-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .connect-item svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .connect-item.linkedin:hover {
+            border-color: #0077b5;
+            color: #0077b5;
+        }
+
+        .connect-item.github:hover {
+            border-color: #333;
+            color: #333;
+        }
+
+        .connect-item.medium:hover {
+            border-color: #00ab6c;
+            color: #00ab6c;
+        }
+
+        .connect-item.email:hover {
+            border-color: #ea4335;
+            color: #ea4335;
+        }
+
+        .connect-item.huggingface:hover {
+            border-color: #ffde59;
+            color: #ffde59;
+        }
+
+        .connect-item.kaggle:hover {
+            border-color: #20beff;
+            color: #20beff;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .what-i-do {
+                grid-template-columns: 1fr;
+            }
+
+            .writing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .connect-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            header {
+                padding: 3rem 0 2rem;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="profile-container">
+            <img src="https://sivasaiyadav8143.github.io/profile.png" alt="Siva Sai's Profile Picture" class="profile-img">
+        </div>
+        <h1>Siva Sai</h1>
+        <div class="title">Senior Data Analyst & AI/ML Engineer</div>
+        <p class="tagline">I build intelligent systems that transform data into decisions — specialising in Machine Learning, NLP, LLMs, RAG systems, and scalable data engineering.</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="section-content">
+            <p>I currently work as <strong>Assistant Vice President at Citi, London</strong>, where I develop analytical solutions, automate workflows, and architect scalable data systems.</p>
+            <p>Alongside my professional work, I'm actively building advanced AI projects and earning certifications from <strong>Google, IBM, UT Austin, and Johns Hopkins University</strong>.</p>
+            
+            <div class="what-i-do">
+                <div class="service-item">
+                    <h3>🤖 AI/ML Development</h3>
+                    <p>Building and deploying machine learning models that solve real-world problems with high accuracy and efficiency.</p>
+                </div>
+                <div class="service-item">
+                    <h3>🔍 RAG Systems</h3>
+                    <p>Creating robust Retrieval-Augmented Generation systems for document understanding and question-answering.</p>
+                </div>
+                <div class="service-item">
+                    <h3>⚙️ Data Engineering</h3>
+                    <p>Designing scalable ETL pipelines and data architectures for large-scale analytics and ML workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="section-content">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>PDF RAG Chatbot</h3>
+                    <div class="tech">LangChain • FAISS • Hugging Face • Streamlit</div>
+                    <p>A robust document-question-answering system that handles large PDFs, supports semantic search, and is deployed on Hugging Face Spaces.</p>
+                </div>
+                <div class="project-card">
+                    <h3>LLM Training Pipeline</h3>
+                    <div class="tech">Transformers • PyTorch • Hugging Face • AWS</div>
+                    <p>An end-to-end workflow for fine-tuning LLMs on custom datasets, including data prep, training loops, evaluation, and deployment.</p>
+                </div>
+                <div class="project-card">
+                    <h3>NLP Tools Suite</h3>
+                    <div class="tech">NLTK • spaCy • scikit-learn • Pandas</div>
+                    <p>A collection of NLP utilities for tokenization, embeddings, summarization, and text classification.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Data Engineering Pipelines</h3>
+                    <div class="tech">Python • SQL • Airflow • Pandas</div>
+                    <p>ETL workflows, automation scripts, and scalable data processing systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications & Learning</h2>
+        <div class="section-content">
+            <ul class="cert-list">
+                <li><strong>Post Graduate Program in AI & ML</strong> — UT Austin</li>
+                <li><strong>Applied Generative AI</strong> — Johns Hopkins University</li>
+                <li><strong>Google Data Analytics Professional Certificate</strong></li>
+                <li><strong>Google Advanced Data Analytics</strong> <em>(next)</em></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="writing">
+        <h2>✍️ Latest Writing</h2>
+        <div class="section-content">
+            <p style="margin-bottom: 2rem; text-align: center;">I publish clear, practical articles on AI/ML best practices</p>
+            <div class="writing-grid">
+                <a href="https://medium.com/your-blog-post-1" target="_blank" class="writing-card">
+                    <h4>How to Build a RAG System with LangChain</h4>
+                    <div class="writing-meta">Medium • 10 min read</div>
+                    <div class="writing-preview">Learn how to create robust Retrieval-Augmented Generation systems using LangChain framework...</div>
+                </a>
+                <a href="https://medium.com/your-blog-post-2" target="_blank" class="writing-card">
+                    <h4>Fine-tuning LLMs for Domain-Specific Tasks</h4>
+                    <div class="writing-meta">Medium • 15 min read</div>
+                    <div class="writing-preview">A comprehensive guide to adapting large language models for specific industries and use cases...</div>
+                </a>
+                <a href="https://medium.com/your-blog-post-3" target="_blank" class="writing-card">
+                    <h4>Hugging Face Deployment Best Practices</h4>
+                    <div class="writing-meta">Medium • 12 min read</div>
+                    <div class="writing-preview">Optimize your model deployment workflow with these proven strategies and tips...</div>
+                </a>
+                <a href="https://medium.com/your-blog-post-4" target="_blank" class="writing-card">
+                    <h4>Debugging Common AI Application Issues</h4>
+                    <div class="writing-meta">Medium • 8 min read</div>
+                    <div class="writing-preview">Troubleshoot and resolve the most frequent problems in AI application development...</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Let's Connect</h2>
+        <div class="section-content">
+            <div class="connect-grid">
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="connect-item connect-item-linkedin">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/sivasaiyadav8143" target="_blank" class="connect-item connect-item-github">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://medium.com/@your-username" target="_blank" class="connect-item connect-item-medium">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M0 0v24h24V0H0zm19.938 5.686L18.651 6.92a.376.376 0 0 0-.143.362v9.825a.376.376 0 0 0 .143.361l1.257 1.257v.202h-6.304v-.202l1.303-1.228c.275-.275.275-.288.275-.504V9.468l-4.002 9.16h-.428l-3.956-9.16v6.376a.923.923 0 0 0 .212.651L7.93 18.91v.202H3.614v-.202l1.303-1.227a1.051 1.051 0 0 0 .226-.652V8.297a.22.22 0 0 0-.226-.232l-1.268-1.227v-.203h4.783l4.047 9.23v-7.8a.38.38 0 0 0-.128-.362L11.29 6.92a.376.376 0 0 0-.143-.362V5.686h8.251z"/>
+                    </svg>
+                    Medium
+                </a>
+                <a href="mailto:your.email@example.com" class="connect-item connect-item-email">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h20.728c.904 0 1.636.732 1.636 1.636z"/>
+                    </svg>
+                    Email
+                </a>
+                <a href="https://huggingface.co/your-username" target="_blank" class="connect-item connect-item-huggingface">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.5 16.5h-9v-9h9v9z"/>
+                    </svg>
+                    Hugging Face
+                </a>
+                <a href="https://kaggle.com/your-username" target="_blank" class="connect-item connect-item-kaggle">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0L0 24h24L12 0zm-2 17l-4-8h8l-4 8zm2-10l2 4H8l2-4h4zm6 6l-2-4h4l-2 4z"/>
+                    </svg>
+                    Kaggle
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
+
