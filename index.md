@@ -3,8 +3,6 @@ layout: default
 title: "Home"
 ---
 
-<link rel="stylesheet" href="assets/css/style.css">
-
 <!-- HERO SECTION -->
 <div style="text-align: center; margin-top: 30px;">
   <img src="profile.png" alt="Siva Sai" style="width:160px; border-radius:50%; margin-bottom: 20px;">
