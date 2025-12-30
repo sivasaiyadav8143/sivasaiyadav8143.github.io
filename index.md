@@ -2,7 +2,7 @@
 layout: default
 title: "Home"
 ---
-
+<img src="profile.png" alt="Siva Sai" style="width:180px; border-radius:50%; display:block; margin: 0 auto 20px auto;">
 # Hi, I’m **Siva Sai**  
 ### Senior Data Analyst & AI/ML Engineer
 
