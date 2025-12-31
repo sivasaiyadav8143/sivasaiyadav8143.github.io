@@ -377,6 +377,12 @@
             background: var(--card-bg);
         }
 
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--gray);
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -494,27 +500,8 @@
         <h2>✍️ Latest Writing</h2>
         <div class="section-content">
             <p style="margin-bottom: 2rem; text-align: center;">I publish clear, practical articles on AI/ML best practices</p>
-            <div class="writing-grid">
-                <a href="https://medium.com/your-blog-post-1" target="_blank" class="writing-card">
-                    <h4>How to Build a RAG System with LangChain</h4>
-                    <div class="writing-meta">Medium • 10 min read</div>
-                    <div class="writing-preview">Learn how to create robust Retrieval-Augmented Generation systems using LangChain framework...</div>
-                </a>
-                <a href="https://medium.com/your-blog-post-2" target="_blank" class="writing-card">
-                    <h4>Fine-tuning LLMs for Domain-Specific Tasks</h4>
-                    <div class="writing-meta">Medium • 15 min read</div>
-                    <div class="writing-preview">A comprehensive guide to adapting large language models for specific industries and use cases...</div>
-                </a>
-                <a href="https://medium.com/your-blog-post-3" target="_blank" class="writing-card">
-                    <h4>Hugging Face Deployment Best Practices</h4>
-                    <div class="writing-meta">Medium • 12 min read</div>
-                    <div class="writing-preview">Optimize your model deployment workflow with these proven strategies and tips...</div>
-                </a>
-                <a href="https://medium.com/your-blog-post-4" target="_blank" class="writing-card">
-                    <h4>Debugging Common AI Application Issues</h4>
-                    <div class="writing-meta">Medium • 8 min read</div>
-                    <div class="writing-preview">Troubleshoot and resolve the most frequent problems in AI application development...</div>
-                </a>
+            <div id="medium-articles" class="writing-grid">
+                <div class="loading">Loading articles from Medium...</div>
             </div>
         </div>
     </section>
@@ -535,7 +522,7 @@
                     </svg>
                     GitHub
                 </a>
-                <a href="https://medium.com/@your-username" target="_blank" class="connect-item connect-item-medium">
+                <a href="https://medium.com/@sivasai-yadav" target="_blank" class="connect-item connect-item-medium">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M0 0v24h24V0H0zm19.938 5.686L18.651 6.92a.376.376 0 0 0-.143.362v9.825a.376.376 0 0 0 .143.361l1.257 1.257v.202h-6.304v-.202l1.303-1.228c.275-.275.275-.288.275-.504V9.468l-4.002 9.16h-.428l-3.956-9.16v6.376a.923.923 0 0 0 .212.651L7.93 18.91v.202H3.614v-.202l1.303-1.227a1.051 1.051 0 0 0 .226-.652V8.297a.22.22 0 0 0-.226-.232l-1.268-1.227v-.203h4.783l4.047 9.23v-7.8a.38.38 0 0 0-.128-.362L11.29 6.92a.376.376 0 0 0-.143-.362V5.686h8.251z"/>
                     </svg>
@@ -568,6 +555,70 @@
 <footer>
     © 2025 Siva Sai — Built with GitHub Pages
 </footer>
+
+<script>
+    // Function to fetch Medium articles using RSS feed
+    async function fetchMediumArticles() {
+        try {
+            // Using the correct Medium username
+            const mediumUsername = 'sivasai-yadav';
+            const rssUrl = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${mediumUsername}`;
+            
+            const response = await fetch(rssUrl);
+            const data = await response.json();
+            
+            if (data.status === 'ok' && data.items && data.items.length > 0) {
+                const articles = data.items.slice(0, 4); // Get only first 4 articles
+                const articlesContainer = document.getElementById('medium-articles');
+                
+                articlesContainer.innerHTML = '';
+                
+                articles.forEach(article => {
+                    const articleElement = document.createElement('a');
+                    articleElement.href = article.link;
+                    articleElement.target = '_blank';
+                    articleElement.className = 'writing-card';
+                    
+                    // Extract preview text (first 100 characters or so)
+                    let preview = article.description || '';
+                    // Remove HTML tags and get text content
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = preview;
+                    preview = tempDiv.textContent || tempDiv.innerText || '';
+                    
+                    // Limit preview to 100 characters
+                    if (preview.length > 100) {
+                        preview = preview.substring(0, 100) + '...';
+                    }
+                    
+                    // Format publication date
+                    const pubDate = new Date(article.pubDate);
+                    const formattedDate = pubDate.toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'short', 
+                        day: 'numeric' 
+                    });
+                    
+                    articleElement.innerHTML = `
+                        <h4>${article.title}</h4>
+                        <div class="writing-meta">Medium • ${formattedDate}</div>
+                        <div class="writing-preview">${preview}</div>
+                    `;
+                    
+                    articlesContainer.appendChild(articleElement);
+                });
+            } else {
+                document.getElementById('medium-articles').innerHTML = '<div class="loading">No articles found or unable to load from Medium.</div>';
+            }
+        } catch (error) {
+            console.error('Error fetching Medium articles:', error);
+            document.getElementById('medium-articles').innerHTML = '<div class="loading">Unable to load articles from Medium.</div>';
+        }
+    }
+    
+    // Load articles when page loads
+    document.addEventListener('DOMContentLoaded', fetchMediumArticles);
+</script>
 
 </body>
 </html>
