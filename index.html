@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siva Sai - Senior Data Analyst & AI/ML Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #2563eb;
@@ -13,8 +12,10 @@
             --dark: #111827;
             --text: #374151;
             --light-text: #6b7280;
-            --light-bg: #f3f4f6;
+            --light-bg: #f9fafb;
             --card-bg: #ffffff;
+            --border: #e5e7eb;
+            --shadow: rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
 
@@ -137,7 +138,7 @@
             padding: 2.5rem;
             border-radius: 1.5rem;
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            border: 1px solid var(--light-bg);
+            border: 1px solid var(--border);
             backdrop-filter: blur(10px);
         }
 
@@ -159,7 +160,7 @@
             padding: 2rem;
             border-radius: 1.2rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-            border: 1px solid var(--light-bg);
+            border: 1px solid var(--border);
             transition: var(--transition);
             position: relative;
             overflow: hidden;
@@ -196,7 +197,7 @@
             padding: 2.5rem;
             border-radius: 1.5rem;
             box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-            border: 1px solid var(--light-bg);
+            border: 1px solid var(--border);
             transition: var(--transition);
             position: relative;
             overflow: hidden;
@@ -238,11 +239,17 @@
         }
 
         .cert-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--light-bg);
+            padding: 1.2rem 0;
+            border-bottom: 1px solid var(--border);
             position: relative;
-            padding-left: 2rem;
+            padding-left: 2.5rem;
             color: var(--text);
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .cert-list li:hover {
+            color: var(--primary);
         }
 
         .cert-list li:last-child {
@@ -255,10 +262,16 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            width: 8px;
-            height: 8px;
-            background: var(--primary);
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
             border-radius: 50%;
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+            transition: var(--transition);
+        }
+
+        .cert-list li:hover::before {
+            transform: translateY(-50%) scale(1.2);
         }
 
         .writing-grid {
@@ -272,7 +285,7 @@
             background: var(--light-bg);
             padding: 1.5rem;
             border-radius: 1rem;
-            border: 1px solid var(--light-bg);
+            border: 1px solid var(--border);
             transition: var(--transition);
             text-decoration: none;
             color: var(--dark);
@@ -323,7 +336,7 @@
             padding: 1.5rem;
             border-radius: 1rem;
             background: var(--light-bg);
-            border: 2px solid var(--light-bg);
+            border: 2px solid var(--border);
             transition: var(--transition);
             font-weight: 600;
             height: 100%;
@@ -377,7 +390,7 @@
             margin-top: 60px;
             color: var(--light-text);
             padding: 2rem 0;
-            border-top: 1px solid var(--light-bg);
+            border-top: 1px solid var(--border);
             background: var(--card-bg);
         }
 
@@ -422,6 +435,7 @@
             }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
